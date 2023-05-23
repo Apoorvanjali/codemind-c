@@ -1,22 +1,19 @@
 #include<stdio.h>
 int main()
 {
-    int n,m,i,t;
-    scanf("%d%d",&n,&m);
-    if(n<m)
+    int N,M;
+    scanf("%d%d",&N,&M);
+    while(N!=M)
     {
-        t=n;
-    }
-    else
-    {
-        t=m;
-    }
-    for(i=t;i>=1;i--)
-    {
-        if(n%i==0 && m%i==0)
+        if(M>N)
         {
-            printf("%d",i);
-            break;
+            M=M-N;
+        }
+        else
+        {
+            N=N-M;
         }
     }
+    printf("%d",M);
+    return 0;
 }
